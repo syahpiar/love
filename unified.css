@@ -12,21 +12,17 @@ body {
 }
 
 body {
-    /*
-       style.css dari base memakai overflow:hidden
-       untuk halaman index lama.
-       Karena sekarang semua section berada dalam
-       satu halaman, halaman harus bisa discroll.
-    */
     height: auto;
     min-height: 100vh;
+
     overflow-x: hidden;
     overflow-y: auto;
 }
 
-/* -----------------------------------------
+
+/* =========================================
    PAGE SECTIONS
------------------------------------------ */
+========================================= */
 
 .page-section {
     position: relative;
@@ -44,11 +40,13 @@ body {
     display: flex;
 }
 
-/* -----------------------------------------
-   OPENING / INDEX
------------------------------------------ */
+
+/* =========================================
+   INDEX / OPENING
+========================================= */
 
 #openingSection {
+    width: 100%;
     min-height: 100vh;
 
     display: flex;
@@ -56,6 +54,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 
 .opening-container {
     position: relative;
@@ -75,6 +74,7 @@ body {
     padding: 20px;
 }
 
+
 .opening-envelope {
     font-size: 100px;
 
@@ -85,41 +85,60 @@ body {
     cursor: pointer;
 }
 
+
 .opening-container h1 {
-    margin: 20px 0 0;
+
+    margin:
+        20px 0 0;
 
     font-family:
         "Dancing Script",
         cursive;
 
-    font-size: 52px;
-    line-height: 1.2;
+    font-size:
+        52px;
 
-    color: #7b2cbf;
+    line-height:
+        1.2;
+
+    color:
+        #7b2cbf;
 }
 
-.opening-container p {
-    margin: 15px auto 0;
 
-    max-width: 500px;
+.opening-container p {
+
+    margin:
+        15px auto 0;
+
+    max-width:
+        500px;
 
     font-family:
         "Cormorant Garamond",
         serif;
 
-    font-size: 22px;
-    line-height: 1.5;
+    font-size:
+        22px;
 
-    color: #444;
+    line-height:
+        1.5;
+
+    color:
+        #444;
 }
 
+
 .opening-container #openBtn {
-    margin-top: 40px;
+
+    margin-top:
+        40px;
 
     padding:
         15px 45px;
 
-    border: none;
+    border:
+        none;
 
     border-radius:
         50px;
@@ -127,27 +146,33 @@ body {
     background:
         #c77dff;
 
-    color: white;
+    color:
+        white;
 
     font-family:
         "Cormorant Garamond",
         serif;
 
-    font-size: 20px;
+    font-size:
+        20px;
 
-    cursor: pointer;
+    cursor:
+        pointer;
 
     transition:
         .3s;
 }
 
+
 .opening-container #openBtn:hover {
+
     transform:
         scale(1.08);
 
     background:
         #9d4edd;
 }
+
 
 @keyframes floatEnvelope {
 
@@ -168,279 +193,296 @@ body {
 
 }
 
-/* -----------------------------------------
-   LETTER
------------------------------------------ */
+
+/* =========================================
+   LETTER SECTION
+========================================= */
 
 #letterSection {
-    align-items: flex-start;
+
+    width:
+        100%;
+
+    min-height:
+        100vh;
+
+    align-items:
+        flex-start;
 }
 
-/*
-   Pastikan halaman letter bisa digeser
-   sampai bagian bawah paper.
-*/
+
 #letterSection .paper {
-    flex-shrink: 0;
+
+    flex-shrink:
+        0;
 }
 
-/* -----------------------------------------
-   GALLERY
------------------------------------------ */
 
-#gallerySection {
-    min-height: 100vh;
-}
-
-#gallerySection .gallery-unified {
-    width: 100%;
-    max-width: 900px;
-
-    margin: 0 auto;
-
-    padding:
-        40px 20px 60px;
-
-    text-align: center;
-}
-
-/* -----------------------------------------
-   MOBILE
------------------------------------------ */
-
-@media (max-width: 768px) {
-
-    .opening-container {
-        padding:
-            20px 15px;
-    }
-
-    .opening-envelope {
-        font-size:
-            80px;
-    }
-
-    .opening-container h1 {
-        font-size:
-            42px;
-    }
-
-    .opening-container p {
-        font-size:
-            19px;
-    }
-
-    .opening-container #openBtn {
-        padding:
-            14px 35px;
-
-        font-size:
-            19px;
-    }
-
-}
-
-@media (max-width: 480px) {
-
-    .opening-envelope {
-        font-size:
-            70px;
-    }
-
-    .opening-container h1 {
-        font-size:
-            36px;
-    }
-
-    .opening-container p {
-        font-size:
-            18px;
-    }
-
-}
 /* =========================================
-   FIX ENDING AGAR BENAR-BENAR CENTER
+   GALLERY SECTION
+   DESKTOP
 ========================================= */
 
 #gallerySection {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        flex-start;
+
+    width:
+        100%;
+
+    min-height:
+        100vh;
+
+    padding:
+        0;
 }
+
 
 #gallerySection .gallery-unified {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 55px 20px 70px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width:
+        100%;
 
-    text-align: center;
-}
+    max-width:
+        900px;
 
+    margin:
+        0 auto;
 
-/* Judul gallery */
+    padding:
+        55px 20px 70px;
 
-#gallerySection .gallery-unified > h1 {
-    width: 100%;
-    margin: 0 0 30px;
-    text-align: center;
-}
+    display:
+        flex;
 
+    flex-direction:
+        column;
 
-/* Gallery */
+    align-items:
+        center;
 
-#gallerySection .slider {
-    width: 100%;
-    margin: 0 auto 45px;
-    text-align: center;
-}
-
-#gallerySection .gallery-track {
-    align-items: center;
+    text-align:
+        center;
 }
 
 
 /* =========================================
-   ENDING
+   GALLERY TITLE
+========================================= */
+
+#gallerySection .gallery-unified > h1 {
+
+    width:
+        100%;
+
+    margin:
+        0 0 30px;
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size:
+        52px;
+
+    line-height:
+        1.2;
+
+    color:
+        #7b2cbf;
+
+    text-align:
+        center;
+}
+
+
+/* =========================================
+   SLIDER
+========================================= */
+
+#gallerySection .slider {
+
+    width:
+        100%;
+
+    margin:
+        0 auto 45px;
+
+    overflow:
+        hidden;
+
+    text-align:
+        center;
+}
+
+
+#gallerySection .gallery-track {
+
+    align-items:
+        center;
+}
+
+
+/* =========================================
+   ENDING DESKTOP
 ========================================= */
 
 #gallerySection .unified-ending {
-    width: 100%;
-    max-width: 700px;
 
-    margin: 0 auto;
-    padding: 0;
+    width:
+        100%;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width:
+        700px;
 
-    justify-content: flex-start;
+    margin:
+        0 auto;
 
-    text-align: center;
+    padding:
+        0;
 
-    color: #555;
-    font-size: 22px;
-    line-height: 2;
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        flex-start;
+
+    text-align:
+        center;
+
+    color:
+        #555;
+
+    font-size:
+        22px;
+
+    line-height:
+        2;
 }
 
-
-/* Semua paragraf */
 
 #gallerySection .unified-ending p {
-    width: 100%;
-    max-width: 700px;
 
-    margin: 0 auto 25px;
-    padding: 0;
+    width:
+        100%;
 
-    text-align: center;
+    max-width:
+        700px;
+
+    margin:
+        0 auto 25px;
+
+    padding:
+        0;
+
+    text-align:
+        center;
 }
 
 
-/* Love, Piar */
+/* =========================================
+   LOVE
+========================================= */
 
 #gallerySection .unified-ending .love {
-    width: 100%;
 
-    margin: 35px auto 0;
+    width:
+        100%;
 
-    text-align: center;
+    margin:
+        35px auto 0;
+
+    text-align:
+        center;
 }
 
 
-/* Tombol Baca Lagi */
+/* =========================================
+   BACA LAGI
+========================================= */
 
 #gallerySection .unified-ending .unified-btn {
-    display: block;
 
-    width: auto;
-    min-width: 150px;
+    display:
+        block;
 
-    margin: 20px auto 0;
+    width:
+        auto;
 
-    align-self: center;
+    min-width:
+        150px;
+
+    margin:
+        20px auto 0;
+
+    align-self:
+        center;
 }
 
 
 /* =========================================
    MOBILE
+   GAYA SEPERTI MADE FOR SANIA
 ========================================= */
 
 @media (max-width: 768px) {
 
-    #gallerySection .gallery-unified {
-        max-width: 100%;
-        padding: 35px 15px 55px;
+    #gallerySection {
+
+        width:
+            100%;
+
+        min-height:
+            100vh;
+
+        padding:
+            0;
     }
 
-    #gallerySection .unified-ending {
-        max-width: 650px;
-
-        font-size: 18px;
-        line-height: 1.8;
-    }
-
-    #gallerySection .unified-ending p {
-        max-width: 650px;
-    }
-
-}
-
-
-@media (max-width: 480px) {
 
     #gallerySection .gallery-unified {
-        padding: 25px 10px 45px;
+
+        width:
+            100%;
+
+        max-width:
+            900px;
+
+        margin:
+            auto;
+
+        padding:
+            40px 20px 60px;
+
+        display:
+            block;
+
+        text-align:
+            center;
     }
 
-    #gallerySection .unified-ending {
-        max-width: 100%;
 
-        font-size: 17px;
-        line-height: 1.8;
-    }
-
-    #gallerySection .unified-ending p {
-        max-width: 100%;
-    }
-
-    #gallerySection .unified-ending .unified-btn {
-        min-width: 150px;
-    }
-
-}
-/* =========================================
-   MOBILE GALLERY + ENDING
-   Kembali ke tampilan BASE
-========================================= */
-
-@media (max-width: 768px) {
-
-    #gallerySection .gallery-unified {
-        width: 100%;
-        max-width: 900px;
-
-        margin: auto;
-
-        padding: 40px 20px 60px;
-
-        display: block;
-
-        text-align: center;
-    }
-
+    /* -----------------------------------------
+       JUDUL
+    ----------------------------------------- */
 
     #gallerySection .gallery-unified > h1 {
 
-        width: auto;
+        width:
+            auto;
 
         margin:
             0 0 30px;
@@ -448,20 +490,47 @@ body {
         font-size:
             42px;
 
+        line-height:
+            1.2;
+
         text-align:
             center;
     }
 
 
+    /* -----------------------------------------
+       GALLERY
+    ----------------------------------------- */
+
     #gallerySection .slider {
 
-        width: 100%;
+        width:
+            100%;
 
         margin:
             20px 0 40px;
 
+        overflow:
+            hidden;
+
         text-align:
             center;
+    }
+
+
+    #gallerySection .gallery-track {
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        gap:
+            12px;
+
+        width:
+            max-content;
     }
 
 
@@ -472,12 +541,26 @@ body {
 
         height:
             130px;
+
+        flex-shrink:
+            0;
+
+        object-fit:
+            cover;
+
+        border-radius:
+            18px;
     }
 
 
+    /* -----------------------------------------
+       ENDING
+    ----------------------------------------- */
+
     #gallerySection .unified-ending {
 
-        width: auto;
+        width:
+            auto;
 
         max-width:
             700px;
@@ -485,9 +568,11 @@ body {
         margin:
             0 auto;
 
-        padding: 0;
+        padding:
+            0;
 
-        display: block;
+        display:
+            block;
 
         font-size:
             18px;
@@ -502,7 +587,8 @@ body {
 
     #gallerySection .unified-ending p {
 
-        width: auto;
+        width:
+            auto;
 
         max-width:
             none;
@@ -510,17 +596,25 @@ body {
         margin:
             0 0 25px;
 
+        padding:
+            0;
+
         text-align:
             center;
     }
 
 
+    /* -----------------------------------------
+       LOVE
+    ----------------------------------------- */
+
     #gallerySection .unified-ending .love {
 
-        width: auto;
+        width:
+            auto;
 
-        margin-top:
-            35px;
+        margin:
+            35px auto 0;
 
         font-size:
             34px;
@@ -530,10 +624,17 @@ body {
     }
 
 
+    /* -----------------------------------------
+       BUTTON
+    ----------------------------------------- */
+
     #gallerySection .unified-ending .unified-btn {
 
         display:
             inline-block;
+
+        width:
+            auto;
 
         min-width:
             0;
@@ -556,17 +657,34 @@ body {
 
     #gallerySection .gallery-unified {
 
+        width:
+            100%;
+
         padding:
             25px 10px 45px;
     }
 
 
+    /* -----------------------------------------
+       JUDUL
+    ----------------------------------------- */
+
     #gallerySection .gallery-unified > h1 {
 
         font-size:
             42px;
+
+        line-height:
+            1.2;
+
+        margin:
+            0 0 30px;
     }
 
+
+    /* -----------------------------------------
+       FOTO
+    ----------------------------------------- */
 
     #gallerySection .gallery-track img {
 
@@ -578,20 +696,76 @@ body {
     }
 
 
+    /* -----------------------------------------
+       ENDING
+    ----------------------------------------- */
+
     #gallerySection .unified-ending {
+
+        width:
+            auto;
+
+        max-width:
+            100%;
 
         font-size:
             17px;
 
         line-height:
             1.8;
+
+        text-align:
+            center;
     }
 
+
+    #gallerySection .unified-ending p {
+
+        width:
+            auto;
+
+        max-width:
+            100%;
+
+        margin:
+            0 0 25px;
+
+        text-align:
+            center;
+    }
+
+
+    /* -----------------------------------------
+       LOVE
+    ----------------------------------------- */
 
     #gallerySection .unified-ending .love {
 
         font-size:
             30px;
+
+        margin:
+            35px auto 0;
+
+        text-align:
+            center;
+    }
+
+
+    /* -----------------------------------------
+       BACA LAGI
+    ----------------------------------------- */
+
+    #gallerySection .unified-ending .unified-btn {
+
+        display:
+            inline-block;
+
+        min-width:
+            0;
+
+        margin:
+            20px 0 0;
     }
 
 }
