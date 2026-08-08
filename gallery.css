@@ -1,0 +1,184 @@
+body{
+    margin:0;
+    padding:0;
+    background:linear-gradient(135deg,#fde2e4,#e9d5ff);
+    font-family:"Cormorant Garamond",serif;
+    overflow-x:hidden;
+}
+
+.background{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    background:linear-gradient(135deg,#fde2e4,#e9d5ff);
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:30px 20px;
+    text-align:center;
+}
+
+h1{
+    font-family:"Dancing Script",cursive;
+    font-size:58px;
+    color:#7b2cbf;
+    margin-bottom:30px;
+}
+
+/* ===========================
+   GALLERY
+=========================== */
+
+.slider{
+    width:100%;
+    overflow:hidden;
+    margin:20px auto 40px;
+}
+
+.gallery-track{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    width:max-content;
+    animation:slide 25s linear infinite;
+}
+
+.gallery-track img{
+    width:140px;
+    height:190px;
+    object-fit:cover;
+    border-radius:18px;
+    flex-shrink:0;
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.gallery-track img:hover{
+    transform:scale(1.08);
+}
+
+@keyframes slide{
+
+    0%{
+        transform:translateX(0);
+    }
+
+    100%{
+        transform:translateX(-50%);
+    }
+
+}
+
+/* ===========================
+   ENDING
+=========================== */
+
+.ending{
+    margin-top:35px;
+    color:#555;
+    line-height:2;
+    font-size:22px;
+}
+
+.ending p{
+    margin-bottom:30px;
+}
+
+.love{
+    margin-top:45px;
+    font-size:42px;
+    color:#9d4edd;
+    font-family:"Dancing Script",cursive;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+button{
+    margin-top:35px;
+    border:none;
+    background:#c77dff;
+    color:#fff;
+    padding:16px 40px;
+    border-radius:40px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(199,125,255,.35);
+}
+
+button:hover{
+    background:#9d4edd;
+    transform:scale(1.05);
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width:768px){
+
+.container{
+    padding:20px 15px;
+}
+
+h1{
+    font-size:44px;
+}
+
+.slider{
+    margin:15px 0 30px;
+}
+
+.gallery-track{
+    gap:8px;
+}
+
+.gallery-track img{
+    width:95px;
+    height:130px;
+}
+
+.ending{
+    font-size:18px;
+    line-height:1.8;
+}
+
+.love{
+    font-size:34px;
+}
+
+button{
+    width:90%;
+    max-width:280px;
+}
+
+}
+
+/* ===========================
+   PHONE
+=========================== */
+
+@media (max-width:480px){
+
+h1{
+    font-size:38px;
+}
+
+.gallery-track img{
+    width:85px;
+    height:120px;
+}
+
+.ending{
+    font-size:17px;
+}
+
+.love{
+    font-size:30px;
+}
+
+}
